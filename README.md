@@ -1,38 +1,51 @@
 # Back End Capstone
 
-# Links available for testing
+## Description
 
+This project serves as the backend implementation for a restaurant management system. It provides various endpoints to manage menu items and bookings, along with authentication features.
 
-# Shows static HTML content with paragraph and a Logo
-restaurant
+## API Endpoints
 
-# GET and POST to show and create menu items (no authentication token required)
-restaurant/menu-items
+### Menu Items
 
-# GET, PUT, DELETE to retrieve, update and delete individual menu items (authentication token required)
-restaurant/menu-items/<id>
+- **GET and POST:** Retrieve and create menu items.
+  - Endpoint: `restaurant/menu-items`
+  - Authentication: Not required
 
-# GET and POST to show and make bookings(authentication token required)
-restaurant/booking/tables/
+- **GET, PUT, DELETE:** Retrieve, update, and delete individual menu items.
+  - Endpoint: `restaurant/menu-items/<id>`
+  - Authentication: Token required
 
-# Use Browsable API to add new users
+### Bookings
 
-# POST to generate token for registered users
-auth/token/login/
+- **GET and POST:** Retrieve and make bookings for tables.
+  - Endpoint: `restaurant/booking/tables/`
+  - Authentication: Token required
 
-# POST method to logout the user
-auth/token/logout/
+## Authentication
 
-# POST to generate a token
-restaurant/api-token-auth/
+- **Browsable API:** Use the Browsable API to interactively add new users.
 
-# Testing Command to use to run 2 tests in Tests folder
+- **Generate Token:** 
+  - Endpoint: `auth/token/login/`
+  - Method: POST
+  - Description: Generate token for registered users.
+
+- **Logout User:** 
+  - Endpoint: `auth/token/logout/`
+  - Method: POST
+  - Description: Logout the user.
+
+### Additional Endpoints
+
+- **Generate API Token:** 
+  - Endpoint: `restaurant/api-token-auth/`
+  - Method: POST
+  - Description: Generate a token.
+
+## Testing
+
+To run tests located in the `tests` folder, execute the following command:
+
+```bash
 python manage.py test tests
-
-
-
-
-
-
-
-
